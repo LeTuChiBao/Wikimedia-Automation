@@ -1,7 +1,7 @@
 import {test as setup,expect} from '@playwright/test'
 import * as dotenv from 'dotenv'
 dotenv.config() 
-let username = 'Chibao116'
+let username = process.env.username
 let password = process.env.password
 setup('do login', async ({page})=> {
     await page.goto('https://en.wikipedia.org/wiki/Main_Page');
